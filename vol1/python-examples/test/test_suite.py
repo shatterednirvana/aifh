@@ -13,8 +13,12 @@ from distance.test_euclidean_distance import TestEuclideanDistance
 from distance.test_manhattan_distance import TestManhattanDistance
 
 
+# imports for kmeans tests
+from kmeans.test_cluster import TestCluster
+
+
 test_cases = [TestChebyshevDistance, TestEuclideanDistance,
-  TestManhattanDistance]
+  TestManhattanDistance, TestCluster]
 test_suite = unittest.TestSuite()
 for test_class in test_cases:
   tests = unittest.TestLoader().loadTestsFromTestCase(test_class)
